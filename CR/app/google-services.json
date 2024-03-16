@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "776627025757",
+    "project_id": "crshdr-30269",
+    "storage_bucket": "crshdr-30269.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776627025757:android:d7331250e226a54f881ab4",
+        "android_client_info": {
+          "package_name": "com.example.cr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABQIwzJdm758HVl0AAZQSshbROHWVN-Ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
