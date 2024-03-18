@@ -13,23 +13,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import androidx.core.splashscreen.SplashScreen;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText email, pass;
-    private SplashScreen splashScreen;
+
     private FirebaseAuth firebaseAuth;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        splashScreen = SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        splashScreen.setKeepOnScreenCondition(new SplashScreen.KeepOnScreenCondition() {
-            @Override
-            public boolean shouldKeepOnScreen() { return false;
-            }
-        });
+
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pwd);
         Button btn1 = findViewById(R.id.btn_register);
@@ -45,10 +39,10 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this, "Registration success", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Успешная регистрация", Toast.LENGTH_SHORT).show();
                         }
                         else {
-                            Toast.makeText(RegisterActivity.this, "Registartion failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Иди нахуй", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

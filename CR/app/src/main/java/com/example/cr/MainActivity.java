@@ -44,11 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void add(View view) {
-        Intent intent = new Intent(this, UserActivity.class); startActivity(intent);
+        Intent intent = new Intent(this, UserActivity.class);
+        startActivity(intent);
     }
 
     @Override
     public void onDestroy() { super.onDestroy();
-        db.close(); userCursor.close();
+        db.close();
+        userCursor.close();
     }
 }
